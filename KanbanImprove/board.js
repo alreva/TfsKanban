@@ -13,6 +13,14 @@
 
     var is_focused = true;
 
+    var customStyle =
+        ".board-tile.pale {background-color: transparent; border-color: #ddd; color: #ddd}" + 
+        ".board-tile.at.pale {background-color: transparent; border-color: #ddd; color: #ddd}" + 
+        ".board-tile.cr.pale {background-color: transparent; border-color: #ddd; color: #ddd}" + 
+        ".board-tile.expeditor.pale {background-color: transparent; border-color: #ddd; color: #ddd}" +
+        ".board-tile.blocked.pale {background-color: transparent; border-color: #ddd; color: #ddd}"
+        ;
+
     function improveBoard() {
 
         if (!is_focused || ($(".board-tile").length < 1)) {
@@ -108,11 +116,23 @@
             });
     }
 
+    function addGlobalStyle(css) {
+        var head, style;
+        head = document.getElementsByTagName('head')[0];
+        if (!head) { return; }
+        style = document.createElement('style');
+        style.type = 'text/css';
+        style.innerHTML = css;
+        head.appendChild(style);
+    }
+
     $(function () {
 
         improveBoard();
 
         setCaseHighLight();
+
+        addGlobalStyle(customStyle);
 
         $(window)
             .focus(function () { is_focused = true; })
