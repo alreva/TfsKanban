@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="board-links.js" />
     <Content Include="board-team.js" />
     <Content Include="board-scrum.js" />
     <Content Include="board-business.js" />
