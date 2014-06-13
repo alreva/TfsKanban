@@ -17,7 +17,7 @@
         ".board-tile.pale {background-color: transparent; border-color: #ddd; color: #ddd}" + 
         ".board-tile.at.pale {background-color: transparent; border-color: #ddd; color: #ddd}" + 
         ".board-tile.cr.pale {background-color: transparent; border-color: #ddd; color: #ddd}" + 
-        ".board-tile.expeditor.pale {background-color: transparent; border-color: #ddd; color: #ddd}" +
+        ".board-tile.expediter.pale {background-color: transparent; border-color: #ddd; color: #ddd}" +
         ".board-tile.blocked.pale {background-color: transparent; border-color: #ddd; color: #ddd}"
         ;
 
