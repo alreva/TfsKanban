@@ -27,29 +27,9 @@
         head.appendChild(style);
     }
 
-    function setCaseHighLight() {
-        if ($("[data-case-id]").length < 1) {
-            setTimeout(setCaseHighLight, 1000);
-            return;
-        }
-
-        $('[data-case-id]')
-            .mouseenter(function (evt) {
-                var caseId = $(evt.target).attr('data-case-id') || $(evt.target).closest('[data-case-id]').attr('data-case-id');
-                console.log('Mouse enter... case #:' + caseId)
-
-                $("[data-case-id!='" + caseId + "']").addClass('pale')
-            })
-            .mouseleave(function (evt) {
-                $("[data-case-id]").removeClass('pale')
-            });
-    }
-
     $(function () {
 
         addGlobalStyle(customStyle);
-
-        setCaseHighLight();
     });
 
 })(jQuery);
